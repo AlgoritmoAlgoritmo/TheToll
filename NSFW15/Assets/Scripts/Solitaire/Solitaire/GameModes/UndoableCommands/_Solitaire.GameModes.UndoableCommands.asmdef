@@ -1,0 +1,17 @@
+{
+    "name": "_Solitaire.GameModes.UndoableCommands",
+    "references": [
+        "GUID:38b40f0eb5df86140be50769f61c4484",
+        "GUID:cba758217032248468543c2a1623f776",
+        "GUID:1a3a140125375454bb2357192e494557"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

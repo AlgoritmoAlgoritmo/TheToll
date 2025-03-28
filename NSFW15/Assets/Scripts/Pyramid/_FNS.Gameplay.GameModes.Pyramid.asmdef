@@ -1,0 +1,19 @@
+{
+    "name": "_FNS.Gameplay.GameModes.Pyramid",
+    "rootNamespace": "",
+    "references": [
+        "GUID:1a3a140125375454bb2357192e494557",
+        "GUID:cba758217032248468543c2a1623f776",
+        "GUID:84d5eb43789fcd742a4f012c0cedd1e5",
+        "GUID:ca75a2800b1facb4c8b10a6a787e03c0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

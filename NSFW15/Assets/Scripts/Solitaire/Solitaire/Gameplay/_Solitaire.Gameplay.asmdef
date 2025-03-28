@@ -1,0 +1,17 @@
+{
+    "name": "_Solitaire.Gameplay",
+    "references": [
+        "GUID:cba758217032248468543c2a1623f776",
+        "GUID:ca75a2800b1facb4c8b10a6a787e03c0",
+        "GUID:da98ec09ef3ad4f4dad3e95c9a436827"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

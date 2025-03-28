@@ -1,0 +1,18 @@
+{
+    "name": "_Solitaire.Gameplay.GameMode",
+    "references": [
+        "GUID:1a3a140125375454bb2357192e494557",
+        "GUID:cba758217032248468543c2a1623f776",
+        "GUID:ca75a2800b1facb4c8b10a6a787e03c0",
+        "GUID:48405d975c367ff4a8183cc98c9a481d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

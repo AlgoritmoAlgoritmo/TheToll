@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525800265bfb10f4ab642b4c32d7ca1a, type: 3}
+  m_Name: CardSpritesScriptableObject
+  m_EditorClassIdentifier: 
+  cardThemeData:
+    backSprite: {fileID: 21300000, guid: 75ce3762277fd7f4caba8f500db9fef2, type: 3}
+    suits:
+    - suitName: CLOVER
+      color: BLACK
+      sprites:
+      - {fileID: 21300000, guid: 0696e14c1c4ff984d9926752d78f27a7, type: 3}
+      - {fileID: 21300000, guid: f702d68fb052cc74abae9b82eb4bd998, type: 3}
+      - {fileID: 21300000, guid: 0cb05cd23d4d05643840c5ffc3c08305, type: 3}
+      - {fileID: 21300000, guid: f7335457617fe7a4e8cbf8660d183fef, type: 3}
+      - {fileID: 21300000, guid: 3911f9a314b21f644a8e41a80025d465, type: 3}
+      - {fileID: 21300000, guid: 19c367dae03842141af1d0c6f1d3a816, type: 3}
+      - {fileID: 21300000, guid: 141a6334fc515e148831b9a97bf192a8, type: 3}
+      - {fileID: 21300000, guid: b79360896869a0242b4805677d241b49, type: 3}
+      - {fileID: 21300000, guid: 2136b590db4895d4bb6f97e35d7ca1ac, type: 3}
+      - {fileID: 21300000, guid: 99155fe19b1f6db4bb8b5f5ee8d17586, type: 3}
+      - {fileID: 21300000, guid: 04bef54f48af4f34d915ec11105b36b0, type: 3}
+      - {fileID: 21300000, guid: 2e1a455f718715f48a98639444512c3a, type: 3}
+      - {fileID: 21300000, guid: 18ed89529967afd4f96042bb60bdb3fd, type: 3}
+    - suitName: DIAMOND
+      color: RED
+      sprites:
+      - {fileID: 21300000, guid: f7d194cc196364845b2bbf074758ddc9, type: 3}
+      - {fileID: 21300000, guid: 2ec32497567efbb4b9dd0ff872d45ce7, type: 3}
+      - {fileID: 21300000, guid: 1d1f0061007438a47a442a8e68b4b837, type: 3}
+      - {fileID: 21300000, guid: 1ec3444b5203b0a4d8011c838e0a47b5, type: 3}
+      - {fileID: 21300000, guid: 09a546d8ea23d7c459b3a729c0d6d88b, type: 3}
+      - {fileID: 21300000, guid: 7324033c4483c2846884b3cbac7774a0, type: 3}
+      - {fileID: 21300000, guid: bfa30c4e3e45e0549a80139fdce48594, type: 3}
+      - {fileID: 21300000, guid: 5615f35d503b8194c96e67f0b048133f, type: 3}
+      - {fileID: 21300000, guid: e8adfbb323b0adb4ebdd4e2ed6b8aaf4, type: 3}
+      - {fileID: 21300000, guid: 3a87ef59bdac3284181efe73fed213ab, type: 3}
+      - {fileID: 21300000, guid: c59f947fc8cb6c94485ee68bbf3ada8f, type: 3}
+      - {fileID: 21300000, guid: f912428b90cc6bf4cafde28d1ac19f73, type: 3}
+      - {fileID: 21300000, guid: d477cfc635c2c904a85480d855456840, type: 3}
+    - suitName: HEARTS
+      color: RED
+      sprites:
+      - {fileID: 21300000, guid: f4559473b87074d4cb319707f299f4ab, type: 3}
+      - {fileID: 21300000, guid: 50870e6f32bb4df44858d999bf82fd55, type: 3}
+      - {fileID: 21300000, guid: f4ddf08a93902c14aa2751b85d25ff1b, type: 3}
+      - {fileID: 21300000, guid: dc9dadbfb66d9d849881b3c5876c260f, type: 3}
+      - {fileID: 21300000, guid: fcced47326af6d944834d58b7104c392, type: 3}
+      - {fileID: 21300000, guid: b84491dd583bbf64ebf85f345268b5fe, type: 3}
+      - {fileID: 21300000, guid: 7703bf20de5bc614292c8bcceff1d76f, type: 3}
+      - {fileID: 21300000, guid: 1a1cb240a7ca4b740a6ef0b5d2e6565c, type: 3}
+      - {fileID: 21300000, guid: 6783266561bd73149be40d6eff212f98, type: 3}
+      - {fileID: 21300000, guid: c3ab6e45d6bc1814fbe1a90b4da8f0be, type: 3}
+      - {fileID: 21300000, guid: 0599cb37d61e8794ea36bce51131c868, type: 3}
+      - {fileID: 21300000, guid: a912125ef6cbad5418f64cf7bc7b6bed, type: 3}
+      - {fileID: 21300000, guid: 6a2705f2782279c45abd23d082d9b1ad, type: 3}
+    - suitName: SPADES
+      color: BLACK
+      sprites:
+      - {fileID: 21300000, guid: db9c0bb3e06122847a3418a4dfddce7e, type: 3}
+      - {fileID: 21300000, guid: e9bd0fc075bf8254d91222dae7702a11, type: 3}
+      - {fileID: 21300000, guid: f935fc630b6d6f24eb74029681386607, type: 3}
+      - {fileID: 21300000, guid: e956107df5d371d469e972c05ebad225, type: 3}
+      - {fileID: 21300000, guid: 1129d5eacb61e8343a8909f19be486ed, type: 3}
+      - {fileID: 21300000, guid: 6c0e848fb72bc0445a7c49c2035585c4, type: 3}
+      - {fileID: 21300000, guid: 8e8c14ce529cd8f4d94086b9196e6169, type: 3}
+      - {fileID: 21300000, guid: 6c76f2b8f41622f4c960f0efaa7b5d0c, type: 3}
+      - {fileID: 21300000, guid: 19296f954fd423f4781411e99bf3b93f, type: 3}
+      - {fileID: 21300000, guid: 1b9ef558cae72124a9ef2faa45c354bf, type: 3}
+      - {fileID: 21300000, guid: bb7fbb4c9e1873d4fb2efec852e45c38, type: 3}
+      - {fileID: 21300000, guid: d80f5c4b158d3d649811e160972f82d8, type: 3}
+      - {fileID: 21300000, guid: b9227f127f6e3d0438d410821dc0e6c7, type: 3}
