@@ -192,3 +192,166 @@ Received Import Request.
 Number of updated assets reloaded before import = 0
 Start importing Assets/Models/Bandit01/Bandit01_clothes_01.blend using Guid(bea3a61c96004304abb3f9214636b3a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '277d9560d079c884990af9506709fdbb') in 0.583329 seconds 
 Number of asset objects unloaded after import = 35
+========================================================================
+Received Import Request.
+  Time since last request: 343.621054 seconds.
+  path: Assets/Models/Bandit01/Bandit01_clothes_07.blend
+  artifactKey: Guid(30b94ceed0ae5f543bc1f2dadb169154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/Bandit01/Bandit01_clothes_07.blend using Guid(30b94ceed0ae5f543bc1f2dadb169154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5462e721b1833344a24a53ff2a3bce49') in 0.537914 seconds 
+Number of asset objects unloaded after import = 41
+========================================================================
+Received Import Request.
+  Time since last request: 13.041006 seconds.
+  path: Assets/Models/Bandit01/Bandit01_clothes_06.blend
+  artifactKey: Guid(4f2ec0b4f5caff243a2c6baa859e1266) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/Bandit01/Bandit01_clothes_06.blend using Guid(4f2ec0b4f5caff243a2c6baa859e1266) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72530ed43c357e323ca23d5a7fa05fb6') in 0.777983 seconds 
+Number of asset objects unloaded after import = 62
+========================================================================
+Received Import Request.
+  Time since last request: 19.147102 seconds.
+  path: Assets/Models/Bandit01/Bandit01_clothes.blend
+  artifactKey: Guid(30b94ceed0ae5f543bc1f2dadb169154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/Bandit01/Bandit01_clothes.blend using Guid(30b94ceed0ae5f543bc1f2dadb169154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebd0b5baee47c6d7a9f100b539c04150') in 0.473524 seconds 
+Number of asset objects unloaded after import = 41
+========================================================================
+Received Import Request.
+  Time since last request: 1.729929 seconds.
+  path: Assets/Models/Bandit01/Bandit01_body_finished.blend
+  artifactKey: Guid(8505d19bc41058a4ca9daac097b3c6aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/Bandit01/Bandit01_body_finished.blend using Guid(8505d19bc41058a4ca9daac097b3c6aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24522e01e96b394b665d3393ae02daed') in 0.360154 seconds 
+Number of asset objects unloaded after import = 18
+========================================================================
+Received Import Request.
+  Time since last request: 72.284280 seconds.
+  path: Assets/Models/Bandit01/Bandit01_body_05_asd.blend
+  artifactKey: Guid(3a715c7dea32aab4aaed7daef91a751e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/Bandit01/Bandit01_body_05_asd.blend using Guid(3a715c7dea32aab4aaed7daef91a751e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8208af2fcfb6328c7d0895afa2ab05d6') in 0.438060 seconds 
+Number of asset objects unloaded after import = 18
+========================================================================
+Received Import Request.
+  Time since last request: 2.796562 seconds.
+  path: Assets/Models/Bandit01/Bandit01_body_04.blend
+  artifactKey: Guid(853fc55ad0dce4841be4a256bcf756c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/Bandit01/Bandit01_body_04.blend using Guid(853fc55ad0dce4841be4a256bcf756c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc35f8cce64e215410996f5971d4c648') in 0.830892 seconds 
+Number of asset objects unloaded after import = 25
+========================================================================
+Received Import Request.
+  Time since last request: 42.882107 seconds.
+  path: Assets/Models/Bandit01/Bandit01_body_02.blend
+  artifactKey: Guid(752c342839ae8ea42ae4800edbcca3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/Bandit01/Bandit01_body_02.blend using Guid(752c342839ae8ea42ae4800edbcca3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e69f763c3067c341559d4b2be1e0f9da') in 0.391837 seconds 
+Number of asset objects unloaded after import = 22
+========================================================================
+Received Import Request.
+  Time since last request: 14.215789 seconds.
+  path: Assets/Models/Bandit01/Dagger.blend
+  artifactKey: Guid(c96ab735b20d75c4b946a0a10a2d2f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/Bandit01/Dagger.blend using Guid(c96ab735b20d75c4b946a0a10a2d2f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '984d74c8fe56e9de99b888ed214b7467') in 0.175279 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 3008.089935 seconds.
+  path: Assets/Prefabs/Gameplay/SolitaireGames/SolitaireGame-Stage01-Prefab.prefab
+  artifactKey: Guid(77939e59b18f0964099c773d06b922d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Prefabs/Gameplay/SolitaireGames/SolitaireGame-Stage01-Prefab.prefab using Guid(77939e59b18f0964099c773d06b922d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4b0941c0f98d1662aaa10713a9b64d7') in 1.777545 seconds 
+Number of asset objects unloaded after import = 184
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.027463 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 6.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Completed reload, in  8.413 seconds
+Domain Reload Profiling:
+	ReloadAssembly (8417ms)
+		BeginReloadAssembly (1367ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (243ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (1ms)
+			CreateAndSetChildDomain (416ms)
+		EndReloadAssembly (6506ms)
+			LoadAssemblies (665ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (1783ms)
+			ReleaseScriptCaches (10ms)
+			RebuildScriptCaches (336ms)
+			SetupLoadedEditorAssemblies (3241ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (46ms)
+				SetLoadedEditorAssemblies (4ms)
+				RefreshPlugins (7ms)
+				BeforeProcessingInitializeOnLoad (408ms)
+				ProcessInitializeOnLoadAttributes (2310ms)
+				ProcessInitializeOnLoadMethodAttributes (377ms)
+				AfterProcessingInitializeOnLoad (88ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (102ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5230 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (379.4 KB). Loaded Objects now: 5943.
+Memory consumption went from 214.8 MB to 214.4 MB.
+Total: 38.772100 ms (FindLiveObjects: 2.691600 ms CreateObjectMapping: 2.194200 ms MarkObjects: 33.376300 ms  DeleteObjects: 0.505200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:CustomObjectIndexerAttribute: 6b0e35c9178b02a6363f3721b7b8e397 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 11697.875512 seconds.
+  path: Assets/Models/PlayerChar/MainChar_body_02.blend
+  artifactKey: Guid(0b06ed79631a9f64f8ca15c64fc11bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/PlayerChar/MainChar_body_02.blend using Guid(0b06ed79631a9f64f8ca15c64fc11bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd63a506085f797ee4a588f64037b9580') in 8.365180 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 861.474294 seconds.
+  path: Assets/Models/PlayerChar/MainChar_body_02.blend
+  artifactKey: Guid(0b06ed79631a9f64f8ca15c64fc11bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/PlayerChar/MainChar_body_02.blend using Guid(0b06ed79631a9f64f8ca15c64fc11bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92f64690778c5f49e105230f2411c475') in 0.690579 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 1723.595504 seconds.
+  path: Assets/Models/PlayerChar/MainChar_body_02.blend
+  artifactKey: Guid(0b06ed79631a9f64f8ca15c64fc11bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/PlayerChar/MainChar_body_02.blend using Guid(0b06ed79631a9f64f8ca15c64fc11bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8026ecdabc0b07aa73b32323c3e044f8') in 1.313324 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 2731.791969 seconds.
+  path: Assets/Models/PlayerChar/MainChar_body_02.blend
+  artifactKey: Guid(0b06ed79631a9f64f8ca15c64fc11bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/PlayerChar/MainChar_body_02.blend using Guid(0b06ed79631a9f64f8ca15c64fc11bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09aba05c3fcf5e9618658bd102343bf8') in 1.112941 seconds 
+Number of asset objects unloaded after import = 28
