@@ -10,8 +10,7 @@ using UnityEngine.Events;
 using Jam15.Interactions;
 using Solitaire.Gameplay;
 using Solitaire.Gameplay.GameMode;
-
-
+using System.Collections.Generic;
 
 namespace Jam15 {
 	public class GameController : MonoBehaviour {
@@ -27,6 +26,9 @@ namespace Jam15 {
         private AbstractGameMode gameMode;
         private DeckController deckController;
         private GameObject lastNPCCam;
+
+        private List<GameObject> solitaireStagesPrefabs;
+        private short currentStage = 0;
         #endregion
 
 
@@ -36,7 +38,20 @@ namespace Jam15 {
 
         #region Public methods
         public void StartSolitaireGame( InteractableNPC _interactableNPC ) {
-            solitaireGameInstance = Instantiate( _interactableNPC.GetGamePrefab(),
+            solitaireStagesPrefabs = _interactableNPC.GetGamePrefabs();
+            currentStage = 0;
+            lastNPCCam = _interactableNPC.GetCamera();
+            lastNPCCam.SetActive( true );
+
+            StartGame();
+            OnSolitaireModeStarts.Invoke();
+
+
+            /*
+             * Old Code
+             */
+            /*
+            solitaireGameInstance = Instantiate( _interactableNPC.GetGamePrefabs(),
                                                 solitaireGameParent );
             lastNPCCam = _interactableNPC.GetCamera();
             lastNPCCam.SetActive( true );
@@ -46,6 +61,7 @@ namespace Jam15 {
 
             StartGame();
             OnSolitaireModeStarts.Invoke();
+            */
         }
 
         public void EndClearedGame( object _object, System.EventArgs _args ) {
@@ -60,6 +76,24 @@ namespace Jam15 {
 
 
         #region Private methods
+        private StartNextStage() {
+            if( currentStage < solitaireStagesPrefabs.Count ) {
+                solitaireGameInstance = Instantiate( solitaireStagesPrefabs[currentStage],
+                                                    solitaireGameParent );
+                gameMode = solitaireGameInstance.GetComponent<AbstractGameMode>();
+                deckController = solitaireGameInstance.GetComponent<DeckController>();
+
+                currentStage++;
+
+                StartGame();
+                OnSolitaireModeStarts.Invoke();
+
+            } else {
+                Debug.Log( "Solitaire game cleared!" );
+            }
+        }
+
+
         private void StartGame() {
             deckController.onCardsCleared += EndClearedGame;
             gameMode.OnCardsCleared.AddListener( deckController.RemoveCardsFromGame );

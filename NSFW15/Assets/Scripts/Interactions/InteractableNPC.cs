@@ -5,14 +5,17 @@
 
 
 
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+
+
 
 namespace Jam15.Interactions {
     public class InteractableNPC : MonoBehaviour, Interfaces.IInteractable {
         #region Variables
         [SerializeField]
-        private GameObject solitaireGamePrefab;
+        private List<GameObject> solitaireGamePrefabs;
         [SerializeField]
         private GameObject npcCamera;
 
@@ -30,8 +33,8 @@ namespace Jam15.Interactions {
             return "Interact";
         }
 
-        public GameObject GetGamePrefab() {
-            return solitaireGamePrefab;
+        public List<GameObject> GetGamePrefabs() {
+            return solitaireGamePrefabs;
         }
 
         public GameObject GetCamera() {
