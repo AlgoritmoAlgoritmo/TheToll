@@ -43,7 +43,7 @@ namespace Jam15 {
             lastNPCCam = _interactableNPC.GetCamera();
             lastNPCCam.SetActive( true );
 
-            StartGame();
+            StartNextStage();
             OnSolitaireModeStarts.Invoke();
 
 
@@ -65,19 +65,30 @@ namespace Jam15 {
         }
 
         public void EndClearedGame( object _object, System.EventArgs _args ) {
-            Debug.Log("Solitaire game cleared.");
-            lastNPCCam.SetActive( false );
-            Destroy( solitaireGameInstance );
+            if( currentStage == solitaireStagesPrefabs.Count - 1 ) {
+                StartNextStage();
 
-            OnGameOverEvent?.Invoke();
-            OnSolitaireModeEnds?.Invoke();
+            } else {
+                Debug.Log("Solitaire game cleared.");
+                lastNPCCam.SetActive( false );
+                Destroy( solitaireGameInstance );
+
+                OnGameOverEvent?.Invoke();
+                OnSolitaireModeEnds?.Invoke();
+            }
         }
         #endregion
 
 
         #region Private methods
-        private StartNextStage() {
+        private void StartNextStage() {
+            Debug.Log( "currentStage " + currentStage );
+
             if( currentStage < solitaireStagesPrefabs.Count ) {
+                if( currentStage > 0 ) {
+                    Destroy( solitaireGameInstance );
+                }
+
                 solitaireGameInstance = Instantiate( solitaireStagesPrefabs[currentStage],
                                                     solitaireGameParent );
                 gameMode = solitaireGameInstance.GetComponent<AbstractGameMode>();
@@ -89,7 +100,9 @@ namespace Jam15 {
                 OnSolitaireModeStarts.Invoke();
 
             } else {
+                Debug.Log( "***********************" );
                 Debug.Log( "Solitaire game cleared!" );
+                Debug.Log( "***********************" );
             }
         }
 
