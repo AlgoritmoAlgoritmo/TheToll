@@ -65,7 +65,7 @@ namespace Jam15 {
         }
 
         public void EndClearedGame( object _object, System.EventArgs _args ) {
-            if( currentStage == solitaireStagesPrefabs.Count - 1 ) {
+            if( currentStage < solitaireStagesPrefabs.Count ) {
                 StartNextStage();
 
             } else {
