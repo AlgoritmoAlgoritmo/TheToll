@@ -898,6 +898,7 @@ GameObject:
   - component: {fileID: 756519608}
   - component: {fileID: 756519609}
   - component: {fileID: 756519610}
+  - component: {fileID: 756519611}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -1020,6 +1021,24 @@ MonoBehaviour:
   interactActionName: Interact
   defaultMapID: DefaultMap
   solitaireMapID: SolitaireMap
+--- !u!114 &756519611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756519606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04b4d0433b9f77c42805e1aba4e0293a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmTracks:
+  - {fileID: 8300000, guid: 0388a3460cc96db438c33c8e98a0377b, type: 3}
+  audioMixer: {fileID: 24100000, guid: e1a6568f15570db448f256a2bc6676ab, type: 2}
+  autoStart: 1
+  isCyclicModeOn: 1
+  waitingTimeToRefreshInSeconds: 1.5
 --- !u!1 &770638278
 GameObject:
   m_ObjectHideFlags: 0
