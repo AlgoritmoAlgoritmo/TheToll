@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1bc3422b0c9b2041b955f8904f7a48c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suitsData: {fileID: 11400000, guid: ef9749b770df6ed4a838359271eaef7c, type: 2}
+  suitsData: {fileID: 11400000, guid: bf635944056127a4fa23ec3532895b5c, type: 2}
   cardContainers:
   - {fileID: 7689262013043645325}
   - {fileID: 7689262013218202083}

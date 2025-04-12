@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   solitaireGamePrefabs:
-  - {fileID: 8179969229102624555, guid: ce97eed98aa863d40a830a7cf2d07ddd, type: 3}
+  - {fileID: 8096338527886930680, guid: 94e202dc5d181554c8bbd00c12aad5c6, type: 3}
   npcCamera: {fileID: 895800462}
   OnSolitaireGameStart:
     m_PersistentCalls:
