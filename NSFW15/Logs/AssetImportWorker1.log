@@ -200,3 +200,27 @@ Received Import Request.
 Number of updated assets reloaded before import = 0
 Start importing Assets/Models/PlayerChar/MainChar.blend using Guid(c1eea3089d19d084fb92ad849e46d41f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac910a21e3521799e7fe02ad519b46c2') in 1.310343 seconds 
 Number of asset objects unloaded after import = 360
+========================================================================
+Received Import Request.
+  Time since last request: 3426.240713 seconds.
+  path: Assets/Models/PlayerChar/MainChar.blend
+  artifactKey: Guid(c1eea3089d19d084fb92ad849e46d41f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/PlayerChar/MainChar.blend using Guid(c1eea3089d19d084fb92ad849e46d41f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3af9924c74a60c7700e52b1836224ac3') in 2.238910 seconds 
+Number of asset objects unloaded after import = 360
+========================================================================
+Received Import Request.
+  Time since last request: 37.360713 seconds.
+  path: Assets/Models/PlayerChar/MainChar_body.blend
+  artifactKey: Guid(5f93d241603a3e242a23c6dee90c5d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/PlayerChar/MainChar_body.blend using Guid(5f93d241603a3e242a23c6dee90c5d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2659b86a57ecd272d5a570f675856225') in 0.568600 seconds 
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 21.851309 seconds.
+  path: Assets/Models/PlayerChar/MainChar_weight_03.blend
+  artifactKey: Guid(09471ea3a43075248b3e01d4a87cba45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/PlayerChar/MainChar_weight_03.blend using Guid(09471ea3a43075248b3e01d4a87cba45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c3c1a98f9b52623d388fd19fc751b58') in 0.360835 seconds 
+Number of asset objects unloaded after import = 574
