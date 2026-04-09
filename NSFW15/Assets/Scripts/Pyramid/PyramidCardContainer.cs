@@ -74,6 +74,9 @@ namespace FNS.Gameplay.GameModes.Pyramid {
                 counter++;
                 FlipCard( auxCard, true );
                 auxCard.GetComponent<RectTransform>().position = GetComponent<RectTransform>().position;
+                auxCard.GetComponent<RectTransform>().rotation = GetComponent<RectTransform>().rotation;
+
+
             }
         }
         #endregion

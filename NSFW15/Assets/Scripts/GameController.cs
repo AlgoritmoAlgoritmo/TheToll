@@ -17,7 +17,10 @@ namespace Jam15 {
 		#region Variables
 		[SerializeField]
 		private RectTransform solitaireGameParent;
-        
+        [SerializeField]
+        private InteractableNPC interactableNPCForTesting;
+
+
         public UnityEvent OnGameOverEvent = new UnityEvent();
         public UnityEvent OnSolitaireModeStarts = new UnityEvent();
         public UnityEvent OnSolitaireModeEnds = new UnityEvent();
@@ -33,6 +36,11 @@ namespace Jam15 {
 
 
         #region MonoBehaviour methods
+        private void Update() {
+            if( Input.GetKeyUp( KeyCode.P ) ) {
+                StartSolitaireGame( interactableNPCForTesting );
+            }
+        }
         #endregion
 
 
