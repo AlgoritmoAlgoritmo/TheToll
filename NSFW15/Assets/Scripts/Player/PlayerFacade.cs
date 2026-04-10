@@ -5,10 +5,11 @@
 
 
 
-using Jam15.Interactions;
-using NSFWJam15.Player.Movement;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEditor.Animations;
+using NSFWJam15.Player.Movement;
+using Jam15.Interactions;
 
 
 
@@ -28,6 +29,12 @@ namespace Jam15.Player {
 
 		public Vector2 MovementDirection = Vector2.zero;
 		public Vector2 RotationDirection = Vector2.zero;
+
+
+		[SerializeField]
+		private Animator animatorController;
+		[SerializeField]
+		private string walkBoolName = "IsWalking";
         #endregion
 
 
@@ -50,6 +57,7 @@ namespace Jam15.Player {
 		#region Public methods
 		public void Move( Vector2 _direction ) {
 			rigidBodyMovement.Move( _direction );
+			animatorController.SetBool( walkBoolName, _direction != Vector2.zero );
 		}
 
 		public void Rotate( Vector2 _delta ) {
