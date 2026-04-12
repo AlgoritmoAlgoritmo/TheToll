@@ -12,6 +12,8 @@ using Solitaire.Gameplay;
 using Solitaire.Gameplay.GameMode;
 using System.Collections.Generic;
 
+
+
 namespace Jam15 {
 	public class GameController : MonoBehaviour {
 		#region Variables
@@ -20,6 +22,8 @@ namespace Jam15 {
         [SerializeField]
         private InteractableNPC interactableNPCForTesting;
 
+        [SerializeField]
+        private BarAnimationController[] barAnimationControllers;
 
         public UnityEvent OnGameOverEvent = new UnityEvent();
         public UnityEvent OnSolitaireModeStarts = new UnityEvent();
@@ -36,6 +40,11 @@ namespace Jam15 {
 
 
         #region MonoBehaviour methods
+        private void Start() {
+            DisplaySolitaireUI( false );
+        }
+
+
         private void Update() {
             if( Input.GetKeyUp( KeyCode.P ) ) {
                 StartSolitaireGame( interactableNPCForTesting );
@@ -53,23 +62,6 @@ namespace Jam15 {
 
             StartNextStage();
             OnSolitaireModeStarts.Invoke();
-
-
-            /*
-             * Old Code
-             */
-            /*
-            solitaireGameInstance = Instantiate( _interactableNPC.GetGamePrefabs(),
-                                                solitaireGameParent );
-            lastNPCCam = _interactableNPC.GetCamera();
-            lastNPCCam.SetActive( true );
-
-            gameMode = solitaireGameInstance.GetComponent<AbstractGameMode>();
-            deckController = solitaireGameInstance.GetComponent<DeckController>();
-
-            StartGame();
-            OnSolitaireModeStarts.Invoke();
-            */
         }
 
         public void EndClearedGame( object _object, System.EventArgs _args ) {
@@ -99,8 +91,16 @@ namespace Jam15 {
 
                 solitaireGameInstance = Instantiate( solitaireStagesPrefabs[currentStage],
                                                     solitaireGameParent );
+
                 gameMode = solitaireGameInstance.GetComponent<AbstractGameMode>();
                 deckController = solitaireGameInstance.GetComponent<DeckController>();
+
+                foreach( var auxBar in barAnimationControllers ) {
+                    gameMode.OnCardsCleared.AddListener(delegate {
+                        auxBar.IncreaseProgression();
+                    } );
+                
+                }
 
                 currentStage++;
 
@@ -120,6 +120,15 @@ namespace Jam15 {
             gameMode.OnCardsCleared.AddListener( deckController.RemoveCardsFromGame );
             gameMode.Initialize( deckController.InitializeCards( gameMode.Suits,
                                                                 gameMode.AmountOfEachSuit ) );
+
+            DisplaySolitaireUI( true );
+        }
+
+
+        private void DisplaySolitaireUI( bool _areDisplayed ) {
+            foreach( var auxBar in barAnimationControllers ) {
+                auxBar.gameObject.SetActive( _areDisplayed );
+            }
         }
         #endregion
     }
