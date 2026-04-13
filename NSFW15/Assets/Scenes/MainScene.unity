@@ -685,6 +685,11 @@ PrefabInstance:
       propertyPath: sexPositionID
       value: HANDY
       objectReference: {fileID: 0}
+    - target: {fileID: 5279681553226601504, guid: 089c71574c19f85489ad7ff42ae8168b,
+        type: 3}
+      propertyPath: maxProgression
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 089c71574c19f85489ad7ff42ae8168b, type: 3}
 --- !u!224 &185588261 stripped
@@ -1356,6 +1361,11 @@ PrefabInstance:
         type: 3}
       propertyPath: suitID
       value: CLOVER
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279681553226601504, guid: 089c71574c19f85489ad7ff42ae8168b,
+        type: 3}
+      propertyPath: maxProgression
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 089c71574c19f85489ad7ff42ae8168b, type: 3}
@@ -3736,6 +3746,11 @@ PrefabInstance:
       propertyPath: sexPositionID
       value: FRONT
       objectReference: {fileID: 0}
+    - target: {fileID: 5279681553226601504, guid: 089c71574c19f85489ad7ff42ae8168b,
+        type: 3}
+      propertyPath: maxProgression
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 089c71574c19f85489ad7ff42ae8168b, type: 3}
 --- !u!224 &1457005279 stripped
@@ -4942,6 +4957,11 @@ PrefabInstance:
         type: 3}
       propertyPath: sexPositionID
       value: BACK
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279681553226601504, guid: 089c71574c19f85489ad7ff42ae8168b,
+        type: 3}
+      propertyPath: maxProgression
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 089c71574c19f85489ad7ff42ae8168b, type: 3}

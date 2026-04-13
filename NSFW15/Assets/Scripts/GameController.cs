@@ -11,8 +11,8 @@ using Jam15.Interactions;
 using Solitaire.Gameplay;
 using Solitaire.Gameplay.GameMode;
 using System.Collections.Generic;
-
-
+using Solitaire.Gameplay.Cards;
+using System;
 
 namespace Jam15 {
 	public class GameController : MonoBehaviour {
@@ -95,12 +95,7 @@ namespace Jam15 {
                 gameMode = solitaireGameInstance.GetComponent<AbstractGameMode>();
                 deckController = solitaireGameInstance.GetComponent<DeckController>();
 
-                foreach( var auxBar in barAnimationControllers ) {
-                    gameMode.OnCardsCleared.AddListener(delegate {
-                        auxBar.IncreaseProgression();
-                    } );
-                
-                }
+                gameMode.OnCardsCleared.AddListener( UpdateIndividualStuitScores );
 
                 currentStage++;
 
@@ -120,7 +115,6 @@ namespace Jam15 {
             gameMode.OnCardsCleared.AddListener( deckController.RemoveCardsFromGame );
             gameMode.Initialize( deckController.InitializeCards( gameMode.Suits,
                                                                 gameMode.AmountOfEachSuit ) );
-
             DisplaySolitaireUI( true );
         }
 
@@ -128,6 +122,21 @@ namespace Jam15 {
         private void DisplaySolitaireUI( bool _areDisplayed ) {
             foreach( var auxBar in barAnimationControllers ) {
                 auxBar.gameObject.SetActive( _areDisplayed );
+            }
+        }
+
+
+        private void UpdateIndividualStuitScores( List<CardFacade> _cards ) {
+            foreach( var auxBar in barAnimationControllers ) {
+                // Updating scores after cards are cleared
+                auxBar.IncreaseProgression( _cards );
+
+                // Checking if any of them reached 100% progress
+                if( auxBar.IsFull() ) {
+                    Debug.Log( auxBar.SuitID );
+                    // Ending game
+                    EndClearedGame( this, EventArgs.Empty );
+                }
             }
         }
         #endregion
