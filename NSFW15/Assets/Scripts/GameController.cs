@@ -13,6 +13,7 @@ using Solitaire.Gameplay.GameMode;
 using System.Collections.Generic;
 using Solitaire.Gameplay.Cards;
 using System;
+using UnityEditor.Animations;
 
 namespace Jam15 {
 	public class GameController : MonoBehaviour {
@@ -25,9 +26,24 @@ namespace Jam15 {
         [SerializeField]
         private BarAnimationController[] barAnimationControllers;
 
+        [SerializeField]
+        private Animator mcAnimatorController;
+        [SerializeField]
+        private Animator banditAnimatorController;
+        [SerializeField]
+        private string frontTriggerName = "frontTrigger";
+        [SerializeField]
+        private string backTriggerName = "backTrigger";
+        [SerializeField]
+        private string handTriggerName = "handTrigger";
+        [SerializeField]
+        private string mouthTriggerName = "mouthTrigger";
+
+
         public UnityEvent OnGameOverEvent = new UnityEvent();
         public UnityEvent OnSolitaireModeStarts = new UnityEvent();
         public UnityEvent OnSolitaireModeEnds = new UnityEvent();
+
 
         private GameObject solitaireGameInstance;
         private AbstractGameMode gameMode;
@@ -40,6 +56,9 @@ namespace Jam15 {
 
 
         #region MonoBehaviour methods
+        private void Awake() {
+        }
+
         private void Start() {
             DisplaySolitaireUI( false );
         }
@@ -136,6 +155,24 @@ namespace Jam15 {
                     Debug.Log( auxBar.SuitID );
                     // Ending game
                     EndClearedGame( this, EventArgs.Empty );
+
+                    string triggerName = null;
+
+                    if( auxBar.SexPositionID == "FRONT" ) {
+                        triggerName = frontTriggerName;
+
+                    } else if( auxBar.SexPositionID == "BACK" ) {
+                        triggerName = backTriggerName;
+
+                    } else if( auxBar.SexPositionID == "MOUTH" ) {
+                        triggerName = mouthTriggerName;
+
+                    } else if( auxBar.SexPositionID == "HAND" ) {
+                        triggerName = handTriggerName;
+                    }
+
+                    mcAnimatorController.SetTrigger( triggerName );
+                    banditAnimatorController.SetTrigger( triggerName );
                 }
             }
         }
