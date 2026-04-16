@@ -5,15 +5,18 @@
 
 
 
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using Jam15.Interactions;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 using Solitaire.Gameplay;
 using Solitaire.Gameplay.GameMode;
-using System.Collections.Generic;
 using Solitaire.Gameplay.Cards;
-using System;
-using UnityEditor.Animations;
+using Jam15.Interactions;
+
+
 
 namespace Jam15 {
 	public class GameController : MonoBehaviour {
@@ -25,30 +28,27 @@ namespace Jam15 {
 
         [SerializeField]
         private BarAnimationController[] barAnimationControllers;
-
+        
         [SerializeField]
-        private Animator mcAnimatorController;
+        private GameObject npcCam;
         [SerializeField]
-        private Animator banditAnimatorController;
+        private PlayableDirector playableDirector;
         [SerializeField]
-        private string frontTriggerName = "frontTrigger";
+        private TimelineAsset backTimeline;
         [SerializeField]
-        private string backTriggerName = "backTrigger";
+        private TimelineAsset frontTimeline;
         [SerializeField]
-        private string handTriggerName = "handTrigger";
+        private TimelineAsset mouthTimeline;
         [SerializeField]
-        private string mouthTriggerName = "mouthTrigger";
-
+        private TimelineAsset handTimeline;
 
         public UnityEvent OnGameOverEvent = new UnityEvent();
         public UnityEvent OnSolitaireModeStarts = new UnityEvent();
         public UnityEvent OnSolitaireModeEnds = new UnityEvent();
 
-
         private GameObject solitaireGameInstance;
         private AbstractGameMode gameMode;
         private DeckController deckController;
-        private GameObject lastNPCCam;
 
         private List<GameObject> solitaireStagesPrefabs;
         private short currentStage = 0;
@@ -56,9 +56,6 @@ namespace Jam15 {
 
 
         #region MonoBehaviour methods
-        private void Awake() {
-        }
-
         private void Start() {
             DisplaySolitaireUI( false );
         }
@@ -76,8 +73,7 @@ namespace Jam15 {
         public void StartSolitaireGame( InteractableNPC _interactableNPC ) {
             solitaireStagesPrefabs = _interactableNPC.GetGamePrefabs();
             currentStage = 0;
-            lastNPCCam = _interactableNPC.GetCamera();
-            lastNPCCam.SetActive( true );
+            npcCam.SetActive( true );
 
             StartNextStage();
             OnSolitaireModeStarts.Invoke();
@@ -89,7 +85,7 @@ namespace Jam15 {
 
             } else {
                 Debug.Log("Solitaire game cleared.");
-                lastNPCCam.SetActive( false );
+                // npcCam.SetActive( false );
                 Destroy( solitaireGameInstance );
 
                 OnGameOverEvent?.Invoke();
@@ -156,23 +152,20 @@ namespace Jam15 {
                     // Ending game
                     EndClearedGame( this, EventArgs.Empty );
 
-                    string triggerName = null;
+                    TimelineAsset timeline = frontTimeline;
 
-                    if( auxBar.SexPositionID == "FRONT" ) {
-                        triggerName = frontTriggerName;
-
-                    } else if( auxBar.SexPositionID == "BACK" ) {
-                        triggerName = backTriggerName;
+                    if( auxBar.SexPositionID == "BACK" ) {
+                        timeline = backTimeline;
 
                     } else if( auxBar.SexPositionID == "MOUTH" ) {
-                        triggerName = mouthTriggerName;
+                        timeline = mouthTimeline;
 
                     } else if( auxBar.SexPositionID == "HAND" ) {
-                        triggerName = handTriggerName;
+                        timeline = handTimeline;
                     }
 
-                    mcAnimatorController.SetTrigger( triggerName );
-                    banditAnimatorController.SetTrigger( triggerName );
+                    playableDirector.playableAsset = timeline;
+                    playableDirector.Play();
                 }
             }
         }
