@@ -34,6 +34,8 @@ namespace Jam15 {
         [SerializeField]
         private PlayableDirector playableDirector;
         [SerializeField]
+        private TimelineAsset solitaireStartTimeline;
+        [SerializeField]
         private TimelineAsset backTimeline;
         [SerializeField]
         private TimelineAsset frontTimeline;
@@ -130,6 +132,8 @@ namespace Jam15 {
             gameMode.OnCardsCleared.AddListener( deckController.RemoveCardsFromGame );
             gameMode.Initialize( deckController.InitializeCards( gameMode.Suits,
                                                                 gameMode.AmountOfEachSuit ) );
+            playableDirector.playableAsset = solitaireStartTimeline;
+            playableDirector.Play();
             DisplaySolitaireUI( true );
         }
 
