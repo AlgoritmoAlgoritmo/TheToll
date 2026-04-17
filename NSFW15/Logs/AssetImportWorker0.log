@@ -15,7 +15,7 @@ C:/Users/Usuario/Documents/GitHub/TheToll/NSFW15
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60079
+54859
 Successfully changed project path to: C:/Users/Usuario/Documents/GitHub/TheToll/NSFW15
 C:/Users/Usuario/Documents/GitHub/TheToll/NSFW15
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,12 +47,12 @@ C:/Users/Usuario/Documents/GitHub/TheToll/NSFW15
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [4980] Host "[IP] 192.168.1.4 [Port] 0 [Flags] 2 [Guid] 3152217985 [EditorId] 3152217985 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7NK7EKN0) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [4560] Host "[IP] 192.168.1.4 [Port] 0 [Flags] 2 [Guid] 3617021410 [EditorId] 3617021410 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7NK7EKN0) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [4980] Host "[IP] 192.168.1.4 [Port] 0 [Flags] 2 [Guid] 3152217985 [EditorId] 3152217985 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7NK7EKN0) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [4560] Host "[IP] 192.168.1.4 [Port] 0 [Flags] 2 [Guid] 3617021410 [EditorId] 3617021410 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7NK7EKN0) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with {0} workers.
-Refreshing native plugins compatible for Editor in 326.66 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 365.16 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.45f2 (88f88f591b2e)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.45f2/Editor/Data/Resources/UnitySubsystems
@@ -68,44 +68,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.45f2/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.45f2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.45f2/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56884
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56604
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.45f2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.45f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 1.274732 seconds.
+Registered in 0.130350 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 358.84 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 485.08 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in 41.801 seconds
+- Completed reload, in  4.835 seconds
 Domain Reload Profiling:
-	ReloadAssembly (41803ms)
-		BeginReloadAssembly (31419ms)
+	ReloadAssembly (4837ms)
+		BeginReloadAssembly (1683ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (6836ms)
-			LoadAssemblies (31481ms)
+			ReleaseScriptingObjects (1ms)
+			CreateAndSetChildDomain (4ms)
+		EndReloadAssembly (2166ms)
+			LoadAssemblies (1701ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (4512ms)
+			SetupTypeCache (467ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (727ms)
-			SetupLoadedEditorAssemblies (1334ms)
+			RebuildScriptCaches (154ms)
+			SetupLoadedEditorAssemblies (1324ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (116ms)
+				InitializePlatformSupportModulesInManaged (41ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (359ms)
+				RefreshPlugins (485ms)
 				BeforeProcessingInitializeOnLoad (5ms)
-				ProcessInitializeOnLoadAttributes (616ms)
-				ProcessInitializeOnLoadMethodAttributes (238ms)
+				ProcessInitializeOnLoadAttributes (582ms)
+				ProcessInitializeOnLoadMethodAttributes (210ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.036023 seconds.
+Registered in 0.448687 seconds.

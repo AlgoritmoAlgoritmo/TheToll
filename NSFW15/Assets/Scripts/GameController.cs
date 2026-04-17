@@ -21,20 +21,19 @@ using Jam15.Interactions;
 namespace Jam15 {
 	public class GameController : MonoBehaviour {
 		#region Variables
+        [Header("General")]
 		[SerializeField]
 		private RectTransform solitaireGameParent;
         [SerializeField]
         private InteractableNPC interactableNPCForTesting;
-
         [SerializeField]
         private BarAnimationController[] barAnimationControllers;
+
         
+        [Space]
+        [Header("Timeline properties")]
         [SerializeField]
-        private GameObject npcCam;
-        [SerializeField]
-        private PlayableDirector playableDirector;
-        [SerializeField]
-        private TimelineAsset solitaireStartTimeline;
+        private PlayableDirector playableDirector;        
         [SerializeField]
         private TimelineAsset backTimeline;
         [SerializeField]
@@ -44,10 +43,15 @@ namespace Jam15 {
         [SerializeField]
         private TimelineAsset handTimeline;
 
+
+        [Space]
+        [Header("Events")]
         public UnityEvent OnGameOverEvent = new UnityEvent();
         public UnityEvent OnSolitaireModeStarts = new UnityEvent();
         public UnityEvent OnSolitaireModeEnds = new UnityEvent();
 
+
+        // Private properties
         private GameObject solitaireGameInstance;
         private AbstractGameMode gameMode;
         private DeckController deckController;
@@ -75,7 +79,7 @@ namespace Jam15 {
         public void StartSolitaireGame( InteractableNPC _interactableNPC ) {
             solitaireStagesPrefabs = _interactableNPC.GetGamePrefabs();
             currentStage = 0;
-            npcCam.SetActive( true );
+            // npcCam.SetActive( true );
 
             StartNextStage();
             OnSolitaireModeStarts.Invoke();
@@ -132,8 +136,6 @@ namespace Jam15 {
             gameMode.OnCardsCleared.AddListener( deckController.RemoveCardsFromGame );
             gameMode.Initialize( deckController.InitializeCards( gameMode.Suits,
                                                                 gameMode.AmountOfEachSuit ) );
-            playableDirector.playableAsset = solitaireStartTimeline;
-            playableDirector.Play();
             DisplaySolitaireUI( true );
         }
 
@@ -172,6 +174,11 @@ namespace Jam15 {
                     playableDirector.Play();
                 }
             }
+        }
+        
+        private void PlayTimeline( TimelineAsset _timeline ) {
+            playableDirector.playableAsset = _timeline;
+            playableDirector.Play();
         }
         #endregion
     }

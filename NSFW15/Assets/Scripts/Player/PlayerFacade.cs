@@ -7,7 +7,6 @@
 
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEditor.Animations;
 using NSFWJam15.Player.Movement;
 using Jam15.Interactions;
 
@@ -35,6 +34,9 @@ namespace Jam15.Player {
 		private Animator animatorController;
 		[SerializeField]
 		private string walkBoolName = "IsWalking";
+
+
+		private bool canMove = true;
         #endregion
 
 
@@ -55,9 +57,20 @@ namespace Jam15.Player {
 		
 
 		#region Public methods
+		public void CanMove( bool _canMove ) {
+			canMove = _canMove;
+
+			if( !_canMove ) {
+				animatorController.SetBool( walkBoolName, false );
+				transform.eulerAngles = Vector3.zero;
+			}
+		}
+
 		public void Move( Vector2 _direction ) {
-			rigidBodyMovement.Move( _direction );
-			animatorController.SetBool( walkBoolName, _direction != Vector2.zero );
+			if( canMove ) {
+				rigidBodyMovement.Move( _direction );
+				animatorController.SetBool( walkBoolName, _direction != Vector2.zero );
+			}
 		}
 
 		public void Rotate( Vector2 _delta ) {
