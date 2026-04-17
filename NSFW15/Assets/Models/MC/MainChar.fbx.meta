@@ -97,8 +97,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: MC_WalkCycle_Bkd
-      takeName: MC_WalkCycle_Bkd
+      name: MC_WalkingCycle_Bkd
+      takeName: MC_WalkingCycle_Bkd
       internalID: -235194580967046694
       firstFrame: 0
       lastFrame: 179
