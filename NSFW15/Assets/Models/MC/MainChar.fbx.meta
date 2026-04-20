@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: BaseSkinMaterial_Skin.004
-    second: {fileID: 2100000, guid: a7d37e918c067e64ab55a92c94bba471, type: 2}
+    second: {fileID: 2100000, guid: 9bc12e200ba28eb4fb02b1b89508e9ab, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: BaseSkinMaterial_Skin.005
-    second: {fileID: 2100000, guid: 5ac1ac22d019fb04ead74423c9efce7a, type: 2}
+    second: {fileID: 2100000, guid: 9bc12e200ba28eb4fb02b1b89508e9ab, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -38,6 +38,11 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material
+    second: {fileID: 2100000, guid: 9bc12e200ba28eb4fb02b1b89508e9ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
     second: {fileID: 2100000, guid: 9bc12e200ba28eb4fb02b1b89508e9ab, type: 2}
   materials:
     materialImportMode: 2
@@ -68,11 +73,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Mc_Standing_Bkd
-      takeName: Mc_Standing_Bkd
+      name: MC_Standing_Bkd
+      takeName: MC_Standing_Bkd
       internalID: 7775129304501472256
       firstFrame: 0
-      lastFrame: 28
+      lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -97,8 +102,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: MC_WalkingCycle_Bkd
-      takeName: MC_WalkingCycle_Bkd
+      name: MC_WalkCycle_Bkd
+      takeName: MC_WalkCycle_Bkd
       internalID: -235194580967046694
       firstFrame: 0
       lastFrame: 179
@@ -216,6 +221,35 @@ ModelImporter:
       name: MC_Mouth_Bkd
       takeName: MC_Mouth_Bkd
       internalID: -7452432715499831316
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: MC_Foreplay_Bkd
+      takeName: MC_Foreplay_Bkd
+      internalID: -6967737042327557836
       firstFrame: 0
       lastFrame: 29
       wrapMode: 0
