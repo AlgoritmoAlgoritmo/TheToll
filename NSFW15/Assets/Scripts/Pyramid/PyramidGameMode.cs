@@ -1,16 +1,16 @@
 /*
-* Author: Iris Bermudez
 * GitHub: https://github.com/AlgoritmoAlgoritmo
 * Date: 08/03/2025 (DD/MM/YYYY)
 */
 
 
 
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Solitaire.Gameplay;
 using Solitaire.Gameplay.Cards;
-using System;
 using Solitaire.Gameplay.CardContainers;
 using Solitaire.Gameplay.Common;
 
@@ -19,6 +19,10 @@ using Solitaire.Gameplay.Common;
 namespace FNS.Gameplay.GameModes.Pyramid {
     public class PyramidGameMode : AbstractGameMode {
         #region Variables
+        public UnityEvent OnCardEvent = new UnityEvent();
+        public UnityEvent OnCardStartDragging = new UnityEvent();
+        public UnityEvent OnCardCleared = new UnityEvent();
+
         private PyramidClearedCardContainer pyramidClearedCardContainer;
         #endregion
 
@@ -65,6 +69,7 @@ namespace FNS.Gameplay.GameModes.Pyramid {
         }
 
         public override void ValidateCardDragging( CardFacade _card ) {
+            OnCardStartDragging?.Invoke();
             _card.SetCanBeDragged( CanCardBeDragged( _card ) );
         }
         #endregion
@@ -98,6 +103,7 @@ namespace FNS.Gameplay.GameModes.Pyramid {
 
         protected override void ManageCardEvent( CardFacade _placedCard, GameObject _detectedGameObject ) {
             Debug.Log("Card dropped.");
+            OnCardEvent?.Invoke();
 
             if( _detectedGameObject is null ) {
                 GetCardContainer( _placedCard ).Refresh();
@@ -128,6 +134,7 @@ namespace FNS.Gameplay.GameModes.Pyramid {
 
                 if( CanBeChildOf( _cardFacade, potentialParent ) ) {
                     Debug.Log( "Both cards add 13" );
+
                     ClearCard( _cardFacade );
                     ClearCard( potentialParent );
                     CheckIfGameIsOver();
@@ -142,6 +149,8 @@ namespace FNS.Gameplay.GameModes.Pyramid {
         }
 
         private void ClearCard( CardFacade _cardFacade ) {
+            OnCardCleared?.Invoke();
+
             GetCardContainer( _cardFacade ).RemoveCard( _cardFacade );
             pyramidClearedCardContainer.AddCard( _cardFacade );
             OnCardsCleared.Invoke( new List<CardFacade> { _cardFacade } );

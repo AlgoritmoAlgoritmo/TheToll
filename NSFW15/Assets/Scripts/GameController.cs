@@ -49,6 +49,7 @@ namespace Jam15 {
         public UnityEvent OnGameOverEvent = new UnityEvent();
         public UnityEvent OnSolitaireModeStarts = new UnityEvent();
         public UnityEvent OnSolitaireModeEnds = new UnityEvent();
+        public UnityEvent OnCardEvent = new UnityEvent();
 
 
         // Private properties
@@ -79,7 +80,6 @@ namespace Jam15 {
         public void StartSolitaireGame( InteractableNPC _interactableNPC ) {
             solitaireStagesPrefabs = _interactableNPC.GetGamePrefabs();
             currentStage = 0;
-            // npcCam.SetActive( true );
 
             StartNextStage();
             OnSolitaireModeStarts.Invoke();
@@ -117,6 +117,7 @@ namespace Jam15 {
                 deckController = solitaireGameInstance.GetComponent<DeckController>();
 
                 gameMode.OnCardsCleared.AddListener( UpdateIndividualStuitScores );
+                gameMode.OnCardsCleared.AddListener( delegate{ OnCardEvent.Invoke(); } );
 
                 currentStage++;
 
