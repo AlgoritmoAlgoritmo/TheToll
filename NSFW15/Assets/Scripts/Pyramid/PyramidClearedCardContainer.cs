@@ -14,10 +14,6 @@ using Solitaire.Gameplay.Cards;
 
 namespace FNS.Gameplay.GameModes.Pyramid {
     public class PyramidClearedCardContainer : AbstractCardContainer {
-        #region Variables
-
-        #endregion
-
         #region Public methods
         public override List<CardFacade> Initialize( List<CardFacade> _cards ) {
             // INTENTIONALLY DOES NOTHING SINCE IT MUST START WITH 0 CARDS
@@ -35,6 +31,7 @@ namespace FNS.Gameplay.GameModes.Pyramid {
             GetTopCard()?.SetChildCard( _card );
             cards.Add( _card );
             _card.ActivatePhysics( false );
+            _card.SetCanBeInteractable( false );
 
             Refresh();
         }
