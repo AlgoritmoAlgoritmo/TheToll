@@ -11,6 +11,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
+using UnityEngine.SceneManagement;
 using Solitaire.Gameplay;
 using Solitaire.Gameplay.GameMode;
 using Solitaire.Gameplay.Cards;
@@ -97,6 +98,19 @@ namespace Jam15 {
                 OnGameOverEvent?.Invoke();
                 OnSolitaireModeEnds?.Invoke();
             }
+        }
+
+        public void RestartSolitaireGame() {
+        
+        }
+
+        public void PlayAgain() {
+            SceneManager.LoadScene( SceneManager.GetSceneAt(0).name );
+        }
+
+        public void QuitGame() {
+            Debug.Log( "Closing game..." );
+            Application.Quit();
         }
         #endregion
 

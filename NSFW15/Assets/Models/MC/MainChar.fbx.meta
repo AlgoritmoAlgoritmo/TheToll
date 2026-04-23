@@ -17,8 +17,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Fingernails
+    second: {fileID: 2100000, guid: 700c62c15fec40b44bf23657c00d6106, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Fingernails.005
     second: {fileID: 2100000, guid: 700c62c15fec40b44bf23657c00d6106, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Genitalia
+    second: {fileID: 2100000, guid: 0b0a9bb9c03543247abb68c1d49f5f4b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -29,6 +39,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Genitalia.005
     second: {fileID: 2100000, guid: ec715bc6940155749b53895b93441b7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lips
+    second: {fileID: 2100000, guid: ba658f41ca74c7a49952bf858f73a07a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
