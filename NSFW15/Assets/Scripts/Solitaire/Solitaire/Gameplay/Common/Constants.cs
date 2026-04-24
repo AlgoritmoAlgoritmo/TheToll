@@ -1,5 +1,5 @@
 ﻿/*
-* Author:	Iris Bermudez
+* GitHub: https://github.com/AlgoritmoAlgoritmo
 * Date:		29/02/2024
 */
 
