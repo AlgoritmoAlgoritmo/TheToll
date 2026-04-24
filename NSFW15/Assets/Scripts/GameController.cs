@@ -29,6 +29,8 @@ namespace Jam15 {
         private InteractableNPC interactableNPCForTesting;
         [SerializeField]
         private BarAnimationController[] barAnimationControllers;
+        [SerializeField]
+        private GameObject pausePanel;
 
         
         [Space]
@@ -57,6 +59,7 @@ namespace Jam15 {
         private GameObject solitaireGameInstance;
         private AbstractGameMode gameMode;
         private DeckController deckController;
+        private InteractableNPC interactableNPC;
 
         private List<GameObject> solitaireStagesPrefabs;
         private short currentStage = 0;
@@ -66,12 +69,17 @@ namespace Jam15 {
         #region MonoBehaviour methods
         private void Start() {
             DisplaySolitaireUI( false );
+
+            Time.timeScale = 1f;
         }
 
 
         private void Update() {
             if( Input.GetKeyUp( KeyCode.P ) ) {
                 StartSolitaireGame( interactableNPCForTesting );
+
+            } else if( Input.GetKeyUp( KeyCode.Escape ) ) {
+                PauseGame();
             }
         }
         #endregion
@@ -79,6 +87,7 @@ namespace Jam15 {
 
         #region Public methods
         public void StartSolitaireGame( InteractableNPC _interactableNPC ) {
+            interactableNPC = _interactableNPC;
             solitaireStagesPrefabs = _interactableNPC.GetGamePrefabs();
             currentStage = 0;
 
@@ -100,8 +109,14 @@ namespace Jam15 {
             }
         }
 
-        public void RestartSolitaireGame() {
-        
+        public void RetrySolitaireGame() {
+            GameObject.Destroy( solitaireGameInstance );
+
+            foreach( var auxBar in barAnimationControllers ) {
+                auxBar.Reset();
+            }
+
+            StartSolitaireGame( interactableNPC );
         }
 
         public void PlayAgain() {
@@ -111,6 +126,22 @@ namespace Jam15 {
         public void QuitGame() {
             Debug.Log( "Closing game..." );
             Application.Quit();
+        }
+        
+        public void OpenURL( string _url ) {
+            Application.OpenURL( _url );
+        }
+
+        public void PauseGame() {
+            if( pausePanel ) {
+                pausePanel.SetActive( !pausePanel.activeInHierarchy );
+
+                if( pausePanel.activeInHierarchy ) {
+                    Time.timeScale = 0;
+                } else {
+                    Time.timeScale = 1;
+                }
+            }        
         }
         #endregion
 
