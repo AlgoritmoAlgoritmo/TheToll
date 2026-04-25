@@ -1,9 +1,11 @@
 # Unity3D .gitignore file.
 # Store this file at the root of your local repository.
-.DS_Store
-Library
-Assets/**/*.blend1
-Temp
+*/.DS_Store
+*/Library
+*/Assets/**/*.blend1
+Builds/
+
+*/Temp
 *.csproj
 *.pidb
 *.sln 
